@@ -20,8 +20,14 @@
 </head>
 
 <body>
+	<button class="down-btn" onclick="scrollDown()">&#187;</button>
+	<button class="up-btn" onclick="scrollUp()">&#171;</button>
+
+
+
+
 	<div class="wrapper-bg">
-		<img src="img/main-bg01.jpg" alt="" class="bg">
+		<img src="img/main-bg02.jpg" alt="" class="bg">
 		<!-- Первая секция Главная -->
 
 		<section class="class">
@@ -41,6 +47,17 @@
 
 	</div>
 
+	<script>
+		function scrollDown() {
+			window.scrollBy(0, 200); // Прокрутка сайта на 200px вниз
+		}
+		function scrollUp() {
+			window.scrollBy(0, -200); // Прокрутка сайта на 200px вверх
+		}
+
+
+
+	</script>
 
 
 </body>

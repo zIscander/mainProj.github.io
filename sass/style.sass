@@ -11,6 +11,9 @@
 
 html
 	font-size: 10px
+	scroll-behavior: smooth
+body
+	scroll-behavior: smooth
 
 section
 
@@ -44,6 +47,30 @@ ul
 	top: 20rem
 	display: inline-block
 	color: #ddd
+
+// Кнопка 
+.down-btn, .up-btn
+	display: flex
+	justify-content: center
+	width: 4rem
+	height: 4rem
+	border-radius: 50%
+	padding: 1rem
+	position: fixed
+	bottom: 10rem
+	font-size: 3rem
+	text-align: center
+	line-height: .4
+	backdrop-filter: blur(3px)
+	background-color: rgba(255,255,255,.077)
+	border: 1px solid rgba(225,225,225, 0.15)
+
+	color: #aaa
+	font-weight: 900
+.down-btn
+	left: 55%
+.up-btn
+	left: 45%
 // Медиа запросы 
 
 // Экраны LG
