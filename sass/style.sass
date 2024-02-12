@@ -1,0 +1,62 @@
+// Общие свойства
+*
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+	outline: none
+
+html
+	font-size: 10px
+
+section
+
+a, a:focus, a:visited, a:hover
+	text-decoration: none
+
+ul
+	list-style: none
+.glass
+	padding: 2rem
+	border: 1px solid rgba(225,225,225, 0.15)
+	border-radius: 20px
+	backdrop-filter: blur(3px)
+	background-color: rgba(255,255,255,.077)
+// Обертка
+.wrapper-bg
+	height: 10000px
+	// background: url(../img/main-bg.jpg) no-repeat center / cover
+.bg
+	position: fixed
+	left: 0
+	right: 0
+	top: 0
+	scale: 1
+	height: 100vh
+	filter: brightness(50%)
+	z-index: -1
+
+.section-header
+	position: fixed
+	top: 20rem
+	display: inline-block
+	color: #ddd
+// Медиа запросы 
+
+// Экраны LG
+@media (max-width: 1199px)
+
+// Экраны MD
+@media (max-width: 991px)
+
+// Экраны SM
+@media (max-width: 767px)
+
+// Экраны XS
+@media (max-width: 575px)
+
+// Экран айфон 12 про
+@media (max-width: 390px)
