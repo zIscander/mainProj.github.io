@@ -1,10 +1,10 @@
-Б!ВЩСЕНЗУ реьдЮ
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="content=" width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,
+		minimum-scale=1.0">
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 
@@ -13,21 +13,24 @@
 	<title>Мой сайт</title>
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/styles.css">
 
 	<script src="js/bootstrap.js" defer></script>
 	<script src="js/lax.js" defer></script>
 	<script src="js/ani.js"></script>
+	<script src="js/main.js"></script>
 </head>
 
 <body>
-	<button class="down-btn" onclick="scrollDown()">&#187;</button>
-	<button class="up-btn" onclick="scrollUp()">&#171;</button>
+	<div class="nav-btn">
+		<button class="down-btn" onclick="scrollDown()">&#187;</button> -->
+		<button class="up-btn" onclick="scrollUp()">&#171;</button> -->
+	</div>
 
 
 
 
-	<div class="wrapper-bg">
+	<main class="wrapper">
 		<img src="img/main-bg02.jpg" alt="" class="bg">
 		<!-- Первая секция Главная -->
 
@@ -46,19 +49,7 @@
 			</div>
 		</section>
 
-	</div>
-
-	<script>
-		function scrollDown() {
-			window.scrollBy(0, 200); // Прокрутка сайта на 200px вниз
-		}
-		function scrollUp() {
-			window.scrollBy(0, -200); // Прокрутка сайта на 200px вверх
-		}
-
-
-
-	</script>
+	</main>
 
 
 </body>
