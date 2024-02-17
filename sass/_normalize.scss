@@ -28,8 +28,7 @@ body,
   Убираем внешние отступы вертикали нужным тегам,
   у которых есть атрибут class
  */
-:where(
-  h1,
+:where(h1,
   h2,
   h3,
   h4,
@@ -38,8 +37,7 @@ body,
   p,
   ul,
   ol,
-  dl
-):where([class]) {
+  dl):where([class]) {
   margin-block: 0;
 }
 
@@ -126,8 +124,13 @@ body {
 /**
   Приводим к единому цвету svg-элементы
  */
-svg *[fill] { fill: currentColor }
-svg *[stroke] { stroke: currentColor }
+svg *[fill] {
+  fill: currentColor
+}
+
+svg *[stroke] {
+  stroke: currentColor
+}
 
 /**
   Чиним баг задержки смены цвета при взаимодействии с svg-элементами
