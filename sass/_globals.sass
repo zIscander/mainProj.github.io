@@ -1,17 +1,59 @@
 .wrapper
-  height: 2000px
+  height: 10000px
 .bg
   position: fixed
   height: 100%
-.nav-btn
-  display: flex
-  flex-direction: column
+
+// Навигация 
+.nav
+  margin-right: calc( 30px * -1 )
+  padding: 10px 80px 10px 10px
   position: fixed
   bottom: 5%
-  left: 20%
-  // translate: -50%
+  right: 2%
+  color: $c-light
+  background: $c-glass
+  border-top-left-radius: $border-radius
+  border-bottom-left-radius: $border-radius
+
   z-index: 1
-.down-btn
-  rotate: -90deg
-.up-btn
-  rotate: -90deg
+  &__btns
+    display: flex
+    flex-direction: column
+    position: fixed
+    bottom: 7%
+    right: 18%
+  &__btn
+    position: relative
+    padding: 5px 10px
+    background: $c-glass
+    border: none
+    border-radius: $border-radius
+    color: $c-light
+    font-size: 24px
+    span
+      // Размести стрелку по центру!
+
+    &--down
+      rotate: -90deg
+    &--up
+      rotate: -90deg
+  &__list
+    &-item
+      color: inherit
+      text-decoration: none
+      font-size: 20px
+
+// Main
+.main
+  &__body
+    padding: 20px
+    border-radius: $border-radius
+    display: block
+    max-width: 900px
+    position: fixed
+    top: 30%
+    left: 10%
+    color: $c-light
+    background: $c-glass
+    z-index: 2

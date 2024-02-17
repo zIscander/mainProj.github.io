@@ -22,23 +22,33 @@
 </head>
 
 <body>
-	<div class="nav-btn">
-		<button class="down-btn" onclick="scrollDown()">&#187;</button> -->
-		<button class="up-btn" onclick="scrollUp()">&#171;</button> -->
-	</div>
+	<nav class="nav">
+		<ul class="nav__list">
+			<li class="nav__list-item" onclick="scrollToMain()">Начало</li>
+			<li class="nav__list-item">Обо мне</li>
+			<li class="nav__list-item">Карьера</li>
+			<li class="nav__list-item">Портфолио</li>
+			<li class="nav__list-item">Контакты</li>
+		</ul>
+		<div class="nav__btns">
+			<button class="nav__btn nav__btn--down" onclick="scrollDown()"><span>&#187;</span></button>
+			<button class="nav__btn nav__btn--up" onclick="scrollUp()"><span>&#171;</span></button>
+		</div>
+	</nav>
 
 
 
 
 	<main class="wrapper">
 		<img src="img/main-bg02.jpg" alt="" class="bg">
+
 		<!-- Первая секция Главная -->
 
-		<section class="class">
+		<section class="main">
 			<div class="container">
 
-				<div class="section-header glass">
-					<h1 class="title">Сайт Веб разработчика</h1>
+				<div class="main__body" id="main__body">
+				<h1 class="title main__title">Сайт Веб разработчика</h1>
 					<p class="sub-title"></p>
 				</div>
 
