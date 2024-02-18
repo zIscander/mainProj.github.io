@@ -13,20 +13,23 @@
   right: 2%
   color: $c-light
   background: $c-glass
+  @include glass-bg
   border-top-left-radius: $border-radius
   border-bottom-left-radius: $border-radius
-
   z-index: 1
+
   &__btns
     display: flex
     flex-direction: column
     position: fixed
     bottom: 7%
-    right: 18%
+    right: 250px
+
   &__btn
     position: relative
     padding: 5px 10px
     background: $c-glass
+    @include glass-bg
     border: none
     border-radius: $border-radius
     color: $c-light
@@ -56,4 +59,5 @@
     left: 10%
     color: $c-light
     background: $c-glass
+    @include glass-bg
     z-index: 2
