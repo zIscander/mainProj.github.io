@@ -14,7 +14,6 @@
   bottom: 5%
   right: 2%
   color: $c-light
-  background: $c-glass
   border-top-left-radius: $border-radius
   border-bottom-left-radius: $border-radius
 
@@ -32,7 +31,6 @@
       transition: all .3s
       &:hover
         scale: 1.2
-      
 
   &__btns
     display: flex
@@ -45,19 +43,19 @@
     @include glass-bg
 
     position: relative
-    padding: 5px 15px
-    background: $c-glass
-    border: none
+    padding: 10px
     border-radius: 50%
     color: $c-light
     font-size: 24px
-    span
-      // Размести стрелку по центру!
+    &-icon
+      filter: invert(1)
+      text-align: center
+
     &--down
       margin-bottom: 10px
       rotate: -90deg
     &--up
-      rotate: -90deg
+      rotate: 90deg
 
 // Main
 .main
@@ -72,5 +70,4 @@
     top: 30%
     left: 10%
     color: $c-light
-    background: $c-glass
     z-index: 2
