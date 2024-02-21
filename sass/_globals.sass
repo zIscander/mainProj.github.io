@@ -2,8 +2,18 @@
   height: 10000px
 .bg
   position: fixed
-  height: 100%
+  width: 100vw
+  height: 100vh
   z-index: -1
+
+.bg-active
+  width: 100vw
+  height: 100vh
+  position: fixed
+  // Нужны звезды png
+  // background: url(../img/klipartz.com-3.png) no-repeat 93% 50% / cover
+  background-size: 400px
+  perspective: 1000px
 
 // Навигация 
 .nav
@@ -16,6 +26,7 @@
   color: $c-light
   border-top-left-radius: $border-radius
   border-bottom-left-radius: $border-radius
+  z-index: 10
 
   &__list
     padding: 10px 60px 10px 20px
@@ -23,7 +34,7 @@
     flex-direction: column-reverse
     text-align: right
     &-item
-      margin-top: 15px
+      margin-block: 7px
       color: inherit
       text-decoration: none
       font-size: 16px
@@ -48,6 +59,7 @@
     border-radius: 50%
     color: $c-light
     font-size: 24px
+    cursor: pointer
     &-icon
       filter: invert(1)
       text-align: center
