@@ -16,9 +16,11 @@ function scrollToMain() {
 
 // Паралакс эффект для активного фона
 const bgActive = document.querySelector('.bg-active');
+const bgActiveFog01 = document.querySelector('.bg-active--fog01');
 
 document.addEventListener('mousemove', function(e) {
   const posX = e.clientX / window.innerWidth / 1.5;
   const posY = e.clientY / window.innerHeight / 1.5;
   bgActive.style.translate = `${posX}% ${posY}%`;
+  bgActiveFog01.style.translate = `${posX}% ${posY}%`;
 });

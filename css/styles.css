@@ -170,9 +170,16 @@ svg * {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  background-size: 400px;
+  background: url(../img/act-bg01.png) no-repeat center/cover;
   -webkit-perspective: 1000px;
           perspective: 1000px;
+}
+.bg-active--fog01 {
+  background: url(../img/act-bg02.png);
+  position: fixed;
+  top: -10px;
+  width: 100vw;
+  height: 100vh;
 }
 
 .nav {
@@ -206,14 +213,19 @@ svg * {
   color: inherit;
   text-decoration: none;
   font-size: 16px;
+}
+.nav__list-btn {
   cursor: pointer;
+  color: currentColor;
+  background: transparent;
+  border: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.nav__list-item:hover {
+.nav__list-btn:hover {
   scale: 1.2;
 }
-.nav__list-item:active {
+.nav__list-btn:active {
   scale: 1.3;
 }
 .nav__btns {

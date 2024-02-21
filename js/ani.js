@@ -44,6 +44,22 @@ window.onload = function () {
       }
     }),
 
+    // Анимация тумана 01 фона
+    lax.addElements('.bg-active--fog01', {
+      scrollY: {
+        // Увеличение
+        scale: [
+          ["1", "10000"],
+          ['1', '7'],
+        ],
+        // Смещение вверх
+        opacity: [
+          ["1", "600"],
+          ['1', '0'],
+        ]
+      }
+    }),
+
     // Анимация первого заголовка
     lax.addElements('.main__body', {
       scrollY: {
