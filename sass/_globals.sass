@@ -21,6 +21,23 @@
     height: 100vh
 
 // Навигация 
+  // Анимация навигации
+@keyframes nav-fadeIn
+  0%
+    right: -200px
+  100%
+    right: 2%
+  // Анимация появления кнопок стрелочек
+@keyframes arrow-fadeIn
+  0%
+    opacity: 0
+    scale: 0
+  60%
+    scale: 1.2
+  100%
+    opacity: 1
+    scale: 1
+  
 .nav
   @include glass-bg
 
@@ -32,6 +49,7 @@
   border-top-left-radius: $border-radius
   border-bottom-left-radius: $border-radius
   z-index: 10
+  animation: nav-fadeIn .8s linear 
 
   &__list
     padding: 10px 60px 10px 20px
@@ -49,7 +67,7 @@
       background: transparent
       border: none
       transition: all .3s
-      &:hover
+      &:hover, &:focus-visible
         scale: 1.2
       &:active
         scale: 1.3
@@ -58,7 +76,7 @@
     flex-direction: column
     position: fixed
     bottom: 7%
-    right: 250px
+    right: 200px
 
   &__btn
     @include glass-bg
@@ -69,6 +87,9 @@
     color: $c-light
     font-size: 24px
     cursor: pointer
+    opacity: 0
+    scale: 0
+    animation: arrow-fadeIn .5s linear .8s forwards
     &-icon
       filter: invert(1)
       text-align: center

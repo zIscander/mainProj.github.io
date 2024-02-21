@@ -182,6 +182,49 @@ svg * {
   height: 100vh;
 }
 
+@-webkit-keyframes nav-fadeIn {
+  0% {
+    right: -200px;
+  }
+  100% {
+    right: 2%;
+  }
+}
+
+@keyframes nav-fadeIn {
+  0% {
+    right: -200px;
+  }
+  100% {
+    right: 2%;
+  }
+}
+@-webkit-keyframes arrow-fadeIn {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  60% {
+    scale: 1.2;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes arrow-fadeIn {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  60% {
+    scale: 1.2;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
 .nav {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -196,6 +239,8 @@ svg * {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   z-index: 10;
+  -webkit-animation: nav-fadeIn 0.8s linear;
+          animation: nav-fadeIn 0.8s linear;
 }
 .nav__list {
   padding: 10px 60px 10px 20px;
@@ -222,7 +267,7 @@ svg * {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.nav__list-btn:hover {
+.nav__list-btn:hover, .nav__list-btn:focus-visible {
   scale: 1.2;
 }
 .nav__list-btn:active {
@@ -238,7 +283,7 @@ svg * {
           flex-direction: column;
   position: fixed;
   bottom: 7%;
-  right: 250px;
+  right: 200px;
 }
 .nav__btn {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -252,6 +297,10 @@ svg * {
   color: #eee;
   font-size: 24px;
   cursor: pointer;
+  opacity: 0;
+  scale: 0;
+  -webkit-animation: arrow-fadeIn 0.5s linear 0.8s forwards;
+          animation: arrow-fadeIn 0.5s linear 0.8s forwards;
 }
 .nav__btn-icon {
   -webkit-filter: invert(1);
