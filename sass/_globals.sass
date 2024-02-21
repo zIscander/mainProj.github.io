@@ -2,8 +2,23 @@
   height: 10000px
 .bg
   position: fixed
-  height: 100%
+  width: 100vw
+  height: 100vh
   z-index: -1
+
+.bg-active
+  width: 100vw
+  height: 100vh
+  position: fixed
+  background: url(../img/act-bg01.png) no-repeat center / cover
+  perspective: 1000px
+
+  &--fog01
+    background: url(../img/act-bg02.png)
+    position: fixed
+    top: -10px
+    width: 100vw
+    height: 100vh
 
 // Навигация 
 .nav
@@ -16,6 +31,7 @@
   color: $c-light
   border-top-left-radius: $border-radius
   border-bottom-left-radius: $border-radius
+  z-index: 10
 
   &__list
     padding: 10px 60px 10px 20px
@@ -23,15 +39,20 @@
     flex-direction: column-reverse
     text-align: right
     &-item
-      margin-top: 15px
+      margin-block: 7px
       color: inherit
       text-decoration: none
       font-size: 16px
+    &-btn
       cursor: pointer
+      color: currentColor
+      background: transparent
+      border: none
       transition: all .3s
       &:hover
         scale: 1.2
-
+      &:active
+        scale: 1.3
   &__btns
     display: flex
     flex-direction: column
@@ -47,15 +68,17 @@
     border-radius: 50%
     color: $c-light
     font-size: 24px
+    cursor: pointer
     &-icon
       filter: invert(1)
       text-align: center
-
     &--down
       margin-bottom: 10px
       rotate: -90deg
     &--up
       rotate: 90deg
+    &:active
+      border: 1px solid rgba(255,255,255,0.8)
 
 // Main
 .main

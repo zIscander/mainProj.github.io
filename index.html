@@ -12,44 +12,42 @@
 
 	<title>Мой сайт</title>
 
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="css/styles.css">
 
-	<script src="js/bootstrap.js" defer></script>
+	<!-- <script src="js/bootstrap.js" defer></script> -->
 	<script src="js/lax.js" defer></script>
-	<script src="js/ani.js"></script>
-	<script src="js/main.js"></script>
+	<!-- Еще скрипты возле закрывающего body -->
 </head>
 
 <body>
 	<nav class="nav">
 		<ul class="nav__list">
-			<li class="nav__list-item" onclick="scrollToMain()">Начало</li>
-			<li class="nav__list-item">Обо мне</li>
-			<li class="nav__list-item">Карьера</li>
-			<li class="nav__list-item">Портфолио</li>
-			<li class="nav__list-item">Контакты</li>
+			<li class="nav__list-item" onclick="scrollToMain()"><button class="nav__list-btn" type="button">Начало</button></li>
+			<li class="nav__list-item"><button class="nav__list-btn" type="button">Обо мне</button></li>
+			<li class="nav__list-item"><button class="nav__list-btn" type="button">Карьера</button></li>
+			<li class="nav__list-item"><button class="nav__list-btn" type="button">Портфолио</button></li>
+			<li class="nav__list-item"><button class="nav__list-btn" type="button">Контакты</button></li>
 		</ul>
 		<div class="nav__btns">
-			<button class="nav__btn nav__btn--down" onclick="scrollDown()"><span><img class="nav__btn-icon" width="16px" height="16px" src="img/icon/arrow.png" alt="" srcset=""></span></button>
-			<button class="nav__btn nav__btn--up" onclick="scrollUp()"><span><img class="nav__btn-icon" width="16px" height="16px" src="img/icon/arrow.png" alt="" srcset=""></span></button>
+			<button class="nav__btn nav__btn--down" onclick="scrollDown()"><span><img class="nav__btn-icon" width="16px"
+						height="16px" src="img/icon/arrow.png" alt="" srcset=""></span></button>
+			<button class="nav__btn nav__btn--up" onclick="scrollUp()"><span><img class="nav__btn-icon" width="16px"
+						height="16px" src="img/icon/arrow.png" alt="" srcset=""></span></button>
 		</div>
 	</nav>
-	
-	
-
-
 
 	<main class="wrapper">
-		<img src="img/main-bg02.jpg" alt="" class="bg">
-
+		<div class="bg-active"></div>
+		<div class="bg-active--fog01"></div>
+		<img src="img/main-bg03.jpg" alt="" class="bg">
 		<!-- Первая секция Главная -->
 
 		<section class="main">
 			<div class="container">
 
 				<div class="main__body" id="main__body">
-				<h1 class="title main__title">Тест</h1>
+					<h1 class="title main__title">Тест</h1>
 					<p class="sub-title"></p>
 				</div>
 
@@ -62,7 +60,8 @@
 
 	</main>
 
-
+	<script src="js/ani.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>
