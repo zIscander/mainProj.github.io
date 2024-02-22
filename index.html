@@ -21,47 +21,55 @@
 </head>
 
 <body>
-	<nav class="nav">
-		<ul class="nav__list">
-			<li class="nav__list-item" onclick="scrollToMain()"><button class="nav__list-btn" type="button">Начало</button></li>
-			<li class="nav__list-item"><button class="nav__list-btn" type="button">Обо мне</button></li>
-			<li class="nav__list-item"><button class="nav__list-btn" type="button">Карьера</button></li>
-			<li class="nav__list-item"><button class="nav__list-btn" type="button">Портфолио</button></li>
-			<li class="nav__list-item"><button class="nav__list-btn" type="button">Контакты</button></li>
-		</ul>
-		<div class="nav__btns">
-			<button class="nav__btn nav__btn--down" onclick="scrollDown()"><span><img class="nav__btn-icon" width="16px"
-						height="16px" src="img/icon/arrow.png" alt="" srcset=""></span></button>
-			<button class="nav__btn nav__btn--up" onclick="scrollUp()"><span><img class="nav__btn-icon" width="16px"
-						height="16px" src="img/icon/arrow.png" alt="" srcset=""></span></button>
-		</div>
-	</nav>
+	<!-- Анимация загрузки сайта -->
+	<div class="spinner"></div>
 
-	<main class="wrapper">
-		<div class="bg-active"></div>
-		<div class="bg-active--fog01"></div>
-		<img src="img/main-bg03.jpg" alt="" class="bg">
-		<!-- Первая секция Главная -->
+	<div class="content">
 
-		<section class="main">
-			<div class="container">
 
-				<div class="main__body" id="main__body">
-					<h1 class="title main__title">Тест</h1>
-					<p class="sub-title"></p>
-				</div>
-
-				<div class="row">
-
-				</div>
-
+		<!-- Навигация -->
+		<nav class="nav">
+			<ul class="nav__list">
+				<li class="nav__list-item" onclick="scrollToMain()"><button class="nav__list-btn" type="button">Начало</button>
+				</li>
+				<li class="nav__list-item"><button class="nav__list-btn" type="button">Обо мне</button></li>
+				<li class="nav__list-item"><button class="nav__list-btn" type="button">Карьера</button></li>
+				<li class="nav__list-item"><button class="nav__list-btn" type="button">Портфолио</button></li>
+				<li class="nav__list-item"><button class="nav__list-btn" type="button">Контакты</button></li>
+			</ul>
+			<div class="nav__btns">
+				<button class="nav__btn nav__btn--down" onclick="scrollDown()"><span><img class="nav__btn-icon" width="16px"
+							height="16px" src="img/icon/arrow.png" alt="" srcset=""></span></button>
+				<button class="nav__btn nav__btn--up" onclick="scrollUp()"><span><img class="nav__btn-icon" width="16px"
+							height="16px" src="img/icon/arrow.png" alt="" srcset=""></span></button>
 			</div>
-		</section>
+		</nav>
 
-	</main>
+		<main class="wrapper">
+			<div class="bg-active"></div>
+			<div class="bg-active--fog01"></div>
+			<img src="img/main-bg03.jpg" alt="" class="bg">
+			<!-- Первая секция Главная -->
 
-	<script src="js/ani.js"></script>
-	<script src="js/main.js"></script>
+			<section class="main">
+				<div class="container">
+
+					<div class="main__body" id="main__body">
+						<h1 class="title main__title">Я веб-разрабочик</h1>
+						<p class="sub-title">Предоставлю Вашему бизнесу доступ к онлайн рынку через Ваш уникальный веб-сайт!</p>
+					</div>
+
+					<div class="row">
+					</div>
+
+				</div>
+			</section>
+
+		</main>
+
+		<script src="js/ani.js"></script>
+		<script src="js/main.js"></script>
+	</div>
 </body>
 
 </html>
