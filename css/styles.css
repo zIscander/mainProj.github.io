@@ -156,6 +156,10 @@ svg * {
     scroll-behavior: auto !important;
   }
 }
+.content {
+  display: none;
+}
+
 .loader {
   width: 100vw;
   height: 100vh;
