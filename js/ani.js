@@ -1,5 +1,10 @@
 window.onload = function () {
+  
+  // Смена стилей прелоадера и контента после загрузки страницы
+  document.querySelector(".content").style.display = "block";
+  document.querySelector(".loader").style.display = "none";
 
+  // Инициализация lax библиотеки
   lax.init()
 
   // Add a driver that we use to control our animations
@@ -7,8 +12,8 @@ window.onload = function () {
     return window.scrollY
   })
 
-    // Анимация фона
-    lax.addElements('.bg', {
+  // Анимация фона
+  lax.addElements('.bg', {
     scrollY: {
       // Увеличение
       scale: [
@@ -26,7 +31,7 @@ window.onload = function () {
         ['0', '-150'],
       ]
     }
-    }),
+  }),
 
     // Анимация активного фона
     lax.addElements('.bg-active', {

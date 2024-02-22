@@ -1,3 +1,4 @@
+
 // Функция нажатия на стрелку 
 function scrollDown() {
   window.scrollBy(0, 300); // Прокрутка сайта на 200px вниз
@@ -18,7 +19,7 @@ function scrollToMain() {
 const bgActive = document.querySelector('.bg-active');
 const bgActiveFog01 = document.querySelector('.bg-active--fog01');
 
-document.addEventListener('mousemove', function(e) {
+document.addEventListener('mousemove', function (e) {
   const posX = e.clientX / window.innerWidth / 1.5;
   const posY = e.clientY / window.innerHeight / 1.5;
   bgActive.style.translate = `${posX}% ${posY}%`;

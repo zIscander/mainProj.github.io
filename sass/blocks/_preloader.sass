@@ -1,0 +1,116 @@
+.content
+  display: none
+
+.loader
+  width: 100vw
+  height: 100vh
+  position: fixed
+  background: linear-gradient(to right, #868f96 0%, #596164 100%)
+
+#nuotron
+  top: 50%
+  left: 50%
+  width: 84px
+  height: 84px
+  margin-top: -42px
+  margin-left: -42px
+  transform: rotate(45deg)
+
+#nuotron,
+#nuotron *,
+#nuotron *:before
+  display: block
+  position: absolute
+
+#nuotron .ellipse,
+#nuotron .dot
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+
+#nuotron .ellipse
+  border: 18px solid  #f6f930
+  border-radius: 50%
+
+#nuotron .dot
+  animation: dotRotate 4.8s linear infinite
+
+  &:before
+    content: ''
+    top: -42px
+    left: 50%
+    width: 24px
+    height: 24px
+    margin-left: -12px
+    border-radius: 50%
+    background-color: #f6f930
+    animation: dotEffect 1.2s ease-in-out infinite
+
+@-moz-keyframes dotEffect
+  50% 
+  top: 102px
+
+  0%, 50%, 100% 
+  transform: scale(1)
+
+  25% 
+  transform: scale(0.5)
+
+  75% 
+  transform: scale(1.5)
+
+@-webkit-keyframes dotEffect
+  50% 
+  top: 102px
+
+  0%, 50%, 100% 
+  transform: scale(1)
+
+  25% 
+  transform: scale(0.5)
+
+  75% 
+  transform: scale(1.5)
+
+@-o-keyframes dotEffect
+  50% 
+  top: 102px
+
+  0%, 50%, 100% 
+  transform: scale(1)
+
+  25% 
+  transform: scale(0.5)
+
+  75% 
+  transform: scale(1.5)
+
+@keyframes dotEffect
+  50%
+    top: 102px
+
+  0%, 50%, 100%
+    transform: scale(1)
+
+  25%
+    transform: scale(0.5)
+
+  75%
+    transform: scale(1.5)
+
+@-moz-keyframes dotRotate
+  100% 
+  transform: rotate(360deg)
+
+@-webkit-keyframes dotRotate
+  100% 
+  transform: rotate(360deg)
+
+@-o-keyframes dotRotate
+  100% 
+  transform: rotate(360deg)
+
+@keyframes dotRotate
+  100%
+    transform: rotate(360deg)
