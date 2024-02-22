@@ -156,40 +156,98 @@ svg * {
     scroll-behavior: auto !important;
   }
 }
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.loader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: -webkit-gradient(linear, left top, right top, from(#868f96), to(#596164));
+  background: linear-gradient(to right, #868f96 0%, #596164 100%);
 }
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+
+#nuotron {
+  top: 50%;
+  left: 50%;
+  width: 84px;
+  height: 84px;
+  margin-top: -42px;
+  margin-left: -42px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
-.spinner {
-  width: 40px;
-  height: 40px;
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #3498db;
+
+#nuotron,
+#nuotron *,
+#nuotron *:before {
+  display: block;
+  position: absolute;
+}
+
+#nuotron .ellipse,
+#nuotron .dot {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+#nuotron .ellipse {
+  border: 18px solid #f6f930;
   border-radius: 50%;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
 }
 
-.content {
-  display: none;
+#nuotron .dot {
+  -webkit-animation: dotRotate 4.8s linear infinite;
+          animation: dotRotate 4.8s linear infinite;
 }
-
+#nuotron .dot:before {
+  content: "";
+  top: -42px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-radius: 50%;
+  background-color: #f6f930;
+  -webkit-animation: dotEffect 1.2s ease-in-out infinite;
+          animation: dotEffect 1.2s ease-in-out infinite;
+}
+@-webkit-keyframes dotEffect {
+  top: 102px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+@keyframes dotEffect {
+  50% {
+    top: 102px;
+  }
+  0%, 50%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  75% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+@-webkit-keyframes dotRotate {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+@keyframes dotRotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 body {
   font-family: "Rubik", sans-serif;
   font-size: 18px;

@@ -1,9 +1,3 @@
-// Анимация загрузки сайта
-window.onload = function () {
-  document.querySelector(".content").style.display = "block";
-  document.querySelector(".spinner").style.display = "none"; 
-}
-
 
 // Функция нажатия на стрелку 
 function scrollDown() {
