@@ -1,5 +1,5 @@
 window.onload = function () {
-  
+
   // Смена стилей прелоадера и контента после загрузки страницы
   document.querySelector(".content").style.display = "block";
   document.querySelector(".loader").style.display = "none";
@@ -77,6 +77,43 @@ window.onload = function () {
         scale: [
           ["0", "300", "600"],
           ['0', '1', '5'],
+        ]
+      }
+    }),
+
+    // Анимация второго заголовка about
+    lax.addElements('.about__body', {
+      scrollY: {
+        // Увеличение
+        opacity: [
+          ["300", "700", "1000"],
+          ['0', '1', '0'],
+        ],
+        // Смещение Z
+        scale: [
+          ["300", "700", "1000"],
+          ['0', '1', '5'],
+        ]
+      }
+    }),
+
+    // Анимация активного фона
+    lax.addElements('.about__block-img', {
+      scrollY: {
+        // Увеличение
+        scale: [
+          ["0", "300", "700", "1000"],
+          ['0', '0', '1', 5],
+        ],
+        // Смещение справа налево
+        translateX: [
+          ["0", "300", "700", "1000"],
+          ['-800', '-800', '0', '800'],
+        ],
+        // прозрачносить
+        opacity: [
+          ["700", "1000"],
+          ['1', '0'],
         ]
       }
     })

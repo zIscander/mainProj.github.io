@@ -1,6 +1,7 @@
 // Навигация 
 .nav
   @include glass-bg
+  @include fluid-text(18, 16)
 
   margin-right: calc( 3rem * -1 )
   position: fixed
@@ -9,7 +10,7 @@
   color: $c-light
   border-top-left-radius: $border-radius
   border-bottom-left-radius: $border-radius
-  z-index: 10
+  z-index: 1000
   animation: nav-fadeIn .8s linear
 
   &__list

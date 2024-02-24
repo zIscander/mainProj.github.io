@@ -1,5 +1,6 @@
 
 // Функция нажатия на стрелку 
+// Стрелка сломана, надо продумать как сделать что бы работало!!!!!!!!!!!!!!!!!!
 function scrollDown() {
   window.scrollBy(0, 300); // Прокрутка сайта на 200px вниз
 }
@@ -11,6 +12,14 @@ function scrollUp() {
 function scrollToMain() {
   window.scrollTo({
     top: 300,
+    behavior: 'smooth'
+  });
+}
+
+// Скролл к блоку main по нажатию на "Обо мне"
+function scrollToAbout() {
+  window.scrollTo({
+    top: 700,
     behavior: 'smooth'
   });
 }
