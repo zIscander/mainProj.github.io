@@ -66,7 +66,7 @@ window.onload = function () {
     }),
 
     // Анимация первого заголовка
-    lax.addElements('.main__body', {
+    lax.addElements('.hero__body', {
       scrollY: {
         // Увеличение
         opacity: [
