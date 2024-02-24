@@ -1,35 +1,11 @@
-body
-  @include main-font
-
-.wrapper
-  height: 10000px
-.bg
-  position: fixed
-  width: 100vw
-  height: 100vh
-  z-index: -1
-
-.bg-active
-  width: 100vw
-  height: 100vh
-  position: fixed
-  background: url(../img/act-bg01.png) no-repeat center / cover
-  perspective: 1000px
-
-  &--fog01
-    background: url(../img/act-bg02.png) no-repeat top
-    position: fixed
-    top: -10px
-    width: 100vw
-    height: 100vh
-
-// Навигация 
+// Анимации 
   // Анимация навигации
 @keyframes nav-fadeIn
   0%
-    right: -200px
+    right: -20rem
   100%
     right: 2%
+
   // Анимация появления кнопок стрелочек
 @keyframes arrow-fadeIn
   0%
@@ -41,10 +17,62 @@ body
     opacity: 1
     scale: 1
 
+  // Анимация свечения текста
+@keyframes lights-txt
+  0%
+    color: hsl(230, 40%, 80%)
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2), 0 0 0.125em hsla(320, 100%, 60%, 0.3), -1em -0.125em 0.5em hsla(40, 100%, 60%, 0), 1em 0.125em 0.5em hsla(200, 100%, 60%, 0)
+
+  30% 
+    color: hsl(230, 80%, 90%)
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5), 0 0 0.125em hsla(320, 100%, 60%, 0.5), -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2), 0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4)
+
+  40% 
+    color: hsl(230, 100%, 95%)
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5), 0 0 0.125em hsla(320, 100%, 90%, 0.5), -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2), 0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4)
+
+  70%
+    color: hsl(230, 80%, 90%)
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5), 0 0 0.125em hsla(320, 100%, 60%, 0.5), 0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2), -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4)
+
+  100%
+    color: hsl(230, 40%, 80%)
+    text-shadow:0 0 1em hsla(320, 100%, 50%, 0.2),0 0 0.125em hsla(320, 100%, 60%, 0.3),1em -0.125em 0.5em hsla(40, 100%, 60%, 0),-1em 0.125em 0.5em hsla(200, 100%, 60%, 0)
+
+  
+html
+  font-size: 10px
+body
+  @include main-font
+
+.wrapper
+  height: 1000rem
+.bg
+  position: fixed
+  width: 100vw
+  height: 100vh
+  z-index: -1
+
+.bg-active
+  width: 100vw
+  height: 100vh
+  position: fixed
+  background: url(../img/act-bg01.png) no-repeat center / cover
+  perspective: 100rem
+
+  &--fog01
+    background: url(../img/act-bg02.png) no-repeat top
+    position: fixed
+    top: -1rem
+    width: 100vw
+    height: 100vh
+
+// Навигация 
+
 .nav
   @include glass-bg
 
-  margin-right: calc( 30px * -1 )
+  margin-right: calc( 3rem * -1 )
   position: fixed
   bottom: 5%
   right: 2%
@@ -55,12 +83,12 @@ body
   animation: nav-fadeIn .8s linear
 
   &__list
-    padding: 10px 60px 10px 20px
+    padding: 1rem 6rem 1rem 2rem
     display: flex
     flex-direction: column-reverse
     text-align: right
     &-item
-      margin-block: 7px
+      margin-block: .7rem
       color: inherit
       text-decoration: none
     &-btn
@@ -69,6 +97,7 @@ body
       background: transparent
       border: none
       transition: all .3s
+      animation: lights-txt 4s linear infinite
       &:hover, &:focus-visible
         scale: 1.2
       &:active
@@ -78,16 +107,16 @@ body
     flex-direction: column
     position: fixed
     bottom: 7%
-    right: 200px
+    right: 20rem
 
   &__btn
     @include glass-bg
 
     position: relative
-    padding: 10px
+    padding: 1rem
     border-radius: 50%
     color: $c-light
-    font-size: 24px
+    font-size: 2.4rem
     cursor: pointer
     opacity: 0
     scale: 0
@@ -96,7 +125,7 @@ body
       filter: invert(1)
       text-align: center
     &--down
-      margin-bottom: 10px
+      margin-bottom: 1rem
       rotate: -90deg
     &--up
       rotate: 90deg
@@ -107,12 +136,21 @@ body
 .main
   &__body
     @include glass-bg
+    @include padding-blocks
 
-    padding: 20px
-    border-radius: $border-radius
     display: block
-    max-width: 900px
     position: fixed
+    max-width: 90rem
     top: 30%
     left: 10%
     color: $c-light
+    border-radius: $border-radius
+    text-align: center
+
+
+.title
+  font-size: 3rem
+  animation: lights-txt 4s linear infinite
+.sub-title
+  font-size: 2rem
+  font-weight: normal
