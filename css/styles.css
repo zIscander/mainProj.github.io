@@ -391,13 +391,14 @@ body {
 }
 
 .title {
+  font-size: clamp(18px, 3.125vw, 30px);
   margin-bottom: 1rem;
-  font-size: 3rem;
   -webkit-animation: lights-txt 4s linear infinite;
           animation: lights-txt 4s linear infinite;
 }
 
 .sub-title {
+  font-size: clamp(14px, 2.5vw, 24px);
   font-weight: normal;
   color: #aaa;
 }
