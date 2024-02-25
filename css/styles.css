@@ -338,6 +338,18 @@ svg * {
     text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2), 0 0 0.125em hsla(320, 100%, 60%, 0.3), 1em -0.125em 0.5em hsla(40, 100%, 60%, 0), -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
   }
 }
+@-webkit-keyframes flash-point {
+  100% {
+    -webkit-box-shadow: 0 0 5px 6px #fff;
+            box-shadow: 0 0 5px 6px #fff;
+  }
+}
+@keyframes flash-point {
+  100% {
+    -webkit-box-shadow: 0 0 5px 6px #fff;
+            box-shadow: 0 0 5px 6px #fff;
+  }
+}
 html {
   font-size: 10px;
 }
@@ -511,8 +523,9 @@ body {
 .about__body {
   padding: 4rem 6rem;
   width: 70vw;
+  height: 70vh;
   left: 5%;
-  top: 60%;
+  top: 15%;
 }
 .about__block-img {
   padding: 0;
@@ -521,7 +534,27 @@ body {
   z-index: 9;
 }
 .about__img {
+  display: none;
   padding: 3rem 4rem 0;
   -webkit-filter: drop-shadow(0px 0px 50px #222) brightness(85%);
           filter: drop-shadow(0px 0px 50px #222) brightness(85%);
+}
+.about__description {
+  position: fixed;
+  top: 9%;
+  left: 13%;
+}
+
+.point {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #410acd;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px 3px #fff;
+          box-shadow: 0 0 5px 3px #fff;
+  -webkit-animation: flash-point 1s linear alternate infinite;
+          animation: flash-point 1s linear alternate infinite;
 }

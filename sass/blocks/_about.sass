@@ -4,8 +4,9 @@
     @include padding-block
 
     width: 70vw
+    height: 70vh
     left: 5%
-    top: 60%
+    top: 15%
 
   &__block-img
     padding: 0
@@ -13,5 +14,20 @@
     left: 60%
     z-index: 9
   &__img
+    display: none
     padding: 3rem 4rem 0
     filter: drop-shadow(0px 0px 50px #222) brightness(85%)
+  &__description
+    position: fixed
+    top: 9%
+    left: 13%
+.point
+  position: fixed
+  top: 10%
+  left: 10%
+  width: 1.5rem
+  height: 1.5rem
+  background: #410acd
+  border-radius: 50%
+  box-shadow: 0 0 5px 3px #fff
+  animation: flash-point 1s linear alternate infinite 
