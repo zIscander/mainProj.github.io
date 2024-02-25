@@ -1,0 +1,64 @@
+// Навигация 
+.nav
+  @include glass-bg
+  @include fluid-text(18, 16)
+
+  margin-right: calc( 3rem * -1 )
+  position: fixed
+  bottom: 5%
+  right: 2%
+  color: $c-light
+  border-top-left-radius: $border-radius
+  border-bottom-left-radius: $border-radius
+  z-index: 1000
+  animation: nav-fadeIn .8s linear
+
+  &__list
+    padding: 1rem 6rem 1rem 2rem
+    display: flex
+    flex-direction: column-reverse
+    text-align: right
+    &-item
+      margin-block: .7rem
+      color: inherit
+      text-decoration: none
+    &-btn
+      cursor: pointer
+      color: currentColor
+      background: transparent
+      border: none
+      transition: all .3s
+      animation: lights-txt 4s linear infinite
+      &:hover, &:focus-visible
+        scale: 1.2
+      &:active
+        scale: 1.3
+  &__btns
+    display: flex
+    flex-direction: column
+    position: fixed
+    bottom: 7%
+    right: 20rem
+
+  &__btn
+    @include glass-bg
+
+    position: relative
+    padding: 1rem
+    border-radius: 50%
+    color: $c-light
+    font-size: 2.4rem
+    cursor: pointer
+    opacity: 0
+    scale: 0
+    animation: arrow-fadeIn .5s linear .8s forwards
+    &-icon
+      filter: invert(1)
+      text-align: center
+    &--down
+      margin-bottom: 1rem
+      rotate: -90deg
+    &--up
+      rotate: 90deg
+    &:active
+      border: 1px solid rgba(255,255,255,0.8)

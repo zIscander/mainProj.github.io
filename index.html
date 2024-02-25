@@ -27,48 +27,58 @@
 		</div>
 	</div>
 
-
 	<div class="content">
-
 
 		<!-- Навигация -->
 		<nav class="nav">
 			<ul class="nav__list">
 				<li class="nav__list-item" onclick="scrollToMain()"><button class="nav__list-btn" type="button">Начало</button>
 				</li>
-				<li class="nav__list-item"><button class="nav__list-btn" type="button">Обо мне</button></li>
-				<li class="nav__list-item"><button class="nav__list-btn" type="button">Карьера</button></li>
+				<li class="nav__list-item" onclick="scrollToAbout()"><button class="nav__list-btn" type="button">Обо
+						мне</button></li>
+				<li class="nav__list-item"><button class="nav__list-btn" type="button">Навыки</button></li>
 				<li class="nav__list-item"><button class="nav__list-btn" type="button">Портфолио</button></li>
 				<li class="nav__list-item"><button class="nav__list-btn" type="button">Контакты</button></li>
 			</ul>
 			<div class="nav__btns">
-				<button class="nav__btn nav__btn--down" onclick="scrollDown()"><span><img class="nav__btn-icon" width="16px"
-							height="16px" src="img/icon/arrow.png" alt="" srcset=""></span></button>
-				<button class="nav__btn nav__btn--up" onclick="scrollUp()"><span><img class="nav__btn-icon" width="16px"
-							height="16px" src="img/icon/arrow.png" alt="" srcset=""></span></button>
+				<button class="nav__btn nav__btn--down" onclick="scrollDown()"><img class="nav__btn-icon" width="16px"
+						height="16px" src="img/icon/arrow.png" alt=""></button>
+				<button class="nav__btn nav__btn--up" onclick="scrollUp()"><img class="nav__btn-icon" width="16px" height="16px"
+						src="img/icon/arrow.png" alt=""></button>
 			</div>
 		</nav>
 
 		<main class="wrapper">
+			<!-- Фоновые картинки -->
 			<div class="bg-active"></div>
 			<div class="bg-active--fog01"></div>
 			<img src="img/main-bg03.jpg" alt="" class="bg">
+
 			<!-- Первая секция Главная -->
+			<section class="hero">
 
-			<section class="main">
-				<div class="container">
-
-					<div class="main__body" id="main__body">
-						<h1 class="title main__title">Я веб-разрабочик</h1>
-						<p class="sub-title">Предоставлю Вашему бизнесу доступ к онлайн рынку через Ваш уникальный веб-сайт!</p>
-					</div>
-
-					<div class="row">
-					</div>
-
+				<div class="hero__body substrate">
+					<h1 class="title hero__title">Привет! Я Александр Шмик веб-разработчик!</h1>
+					<h2 class="sub-title">Создаю сайты для малого и среднего бизнеса, фрилансеров, креативных людей и всех, кто
+						хочет представить себя и свои услуги в интернете.</h2>
 				</div>
+
 			</section>
 
+			<!-- Вторая секция -->
+			<section class="about">
+
+				<div class="about__body substrate">
+					<p class="about__description sub-title">Начиная с 2018 года я самостоятельно изучаю веб-разработку. В 2021
+						году прошел курсы от GLO Academy и продолжил дальнейшее развитие, потому что это направление постоянно
+						развивается, появляются новые технолоии разработки.</p>
+				</div>
+
+				<div class="about__block-img substrate">
+					<img class="about__img" width="300em" src="img/iam.png" alt="">
+				</div>
+
+			</section>
 		</main>
 
 		<script src="js/ani.js"></script>
