@@ -13,21 +13,55 @@
     top: 6%
     left: 60%
     z-index: 9
+
   &__img
     display: none
     padding: 3rem 4rem 0
     filter: drop-shadow(0px 0px 50px #222) brightness(85%)
+
   &__description
-    position: fixed
-    top: 9%
-    left: 13%
+    // position: fixed
+    // top: 8.8%
+    // left: 39%
+
 .point
-  position: fixed
-  top: 10%
-  left: 10%
+  // position: fixed
+  display: inline-block
+  // top: 10%
+  // left: 35%
   width: 1.5rem
   height: 1.5rem
-  background: #410acd
+  background: $c-accent
   border-radius: 50%
   box-shadow: 0 0 5px 3px #fff
-  animation: flash-point 1s linear alternate infinite 
+  animation: flash-point 1s linear alternate infinite
+
+  &-block
+    display: flex
+    align-items: center
+    justify-content: right
+    column-gap: 2rem
+
+.line
+  // position: fixed
+  // top: 14%
+  // left: 35.7%
+  display: inline-block
+  margin-inline: 98%
+  width: .2rem
+  height: calc( 16.666% * 2 )
+  background: $c-accent
+  box-shadow: 0 0 1px 1px #fff
+  border-radius: 20%
+
+  &:nth-child(n+3)
+    
+    height: 16.6666%
+
+  &-block
+
+    min-width: 20rem
+    height: 90%
+    position: fixed
+    top: 5%
+    left: 5%
