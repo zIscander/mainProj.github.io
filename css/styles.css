@@ -434,7 +434,7 @@ body {
           animation: nav-fadeIn 0.8s linear;
 }
 .nav__list {
-  padding: 1rem 6rem 1rem 2rem;
+  padding: 1rem 3rem 1rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -543,6 +543,11 @@ body {
   -webkit-filter: drop-shadow(0px 0px 30px #222) brightness(76%);
           filter: drop-shadow(0px 0px 30px #222) brightness(76%);
 }
+.about__description {
+  -webkit-animation: lights-txt 4s linear infinite;
+          animation: lights-txt 4s linear infinite;
+}
+
 .point {
   display: inline-block;
   width: 1.5rem;
@@ -570,6 +575,7 @@ body {
 }
 
 .line {
+  position: relative;
   display: block;
   margin-inline: 98%;
   width: 0.2rem;
@@ -577,13 +583,10 @@ body {
   background: #410acd;
   -webkit-box-shadow: 0 0 1px 1px #fff;
           box-shadow: 0 0 1px 1px #fff;
-  border-radius: 20%;
+  border-radius: 5rem;
 }
 .line:nth-child(n+3) {
   height: 14%;
-}
-.line:last-child::after {
-  content: "fff";
 }
 .line-block {
   min-width: 20rem;
