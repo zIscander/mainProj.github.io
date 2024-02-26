@@ -579,14 +579,14 @@ body {
   display: block;
   margin-inline: 98%;
   width: 0.2rem;
-  height: 28%;
+  height: 14%;
   background: #410acd;
   -webkit-box-shadow: 0 0 1px 1px #fff;
           box-shadow: 0 0 1px 1px #fff;
   border-radius: 5rem;
 }
-.line:nth-child(n+3) {
-  height: 14%;
+.line:nth-last-child(2) {
+  height: 28%;
 }
 .line-block {
   min-width: 20rem;
