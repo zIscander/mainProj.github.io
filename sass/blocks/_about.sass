@@ -1,17 +1,52 @@
 // Обо мне
 .about
   &__body
-    @include padding-block
-
+    padding: 1rem 6rem 0
+    display: flex
+    justify-content: space-between
+    align-items: end
     width: 70vw
+    height: 70vh
     left: 5%
-    top: 60%
+    top: 15%
 
-  &__block-img
-    padding: 0
-    top: 6%
-    left: 60%
-    z-index: 9
   &__img
-    padding: 3rem 4rem 0
-    filter: drop-shadow(0px 0px 50px #222) brightness(85%)
+    object-fit: contain
+    padding: 3rem 5rem 0
+    filter: drop-shadow(0px 0px 30px #222) brightness(76%)
+
+  &__description
+    animation: lights-txt 4s linear infinite
+
+.point
+  display: inline-block
+  width: 1.5rem
+  height: 1.5rem
+  background: $c-accent
+  border-radius: 50%
+  box-shadow: 0 0 5px 3px #fff
+  animation: flash-point 1s linear alternate infinite
+
+  &-block
+    display: flex
+    align-items: center
+    justify-content: right
+    column-gap: 2rem
+
+.line
+  position: relative
+  display: block
+  margin-inline: 98%
+  width: .2rem
+  height: 14%
+  background: $c-accent
+  box-shadow: 0 0 1px 1px #fff
+  border-radius: 5rem
+
+  &:nth-last-child(2)
+    height: calc( 14% * 2 )
+
+  &-block
+    min-width: 20rem
+    height: 90%
+    padding-bottom: 4rem
