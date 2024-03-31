@@ -1,17 +1,18 @@
+import Logo from '../logo/Logo';
 import './nav.css'
 
 function Nav() {
   return (
     <>
-      <nav>
+      <nav className='nav'>
         <div className="row">
-          {/* <Logo /> */}
+          <Logo />
           {/* <Button></Button> */}
           {/* <Socials /> */}
         </div>
         <div className="row">
           <ul className="nav__list list">
-            <li className="nav__item"><a href="#" className="nav__link">Обо</a></li>
+            <li className="nav__item"><a href="#" className="nav__link">Обо мне</a></li>
             <li className="nav__item"><a href="#" className="nav__link">Карьера</a></li>
             <li className="nav__item"><a href="#" className="nav__link">Стек</a></li>
             <li className="nav__item"><a href="#" className="nav__link">Портфолио</a></li>
