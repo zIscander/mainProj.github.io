@@ -1,0 +1,23 @@
+@import '../../utils/variables.sass'
+
+.substrate
+  padding: 3rem
+  width: fit-content
+  border-radius: .8rem
+  backdrop-filter: blur(2px)
+  background-color: $bg-opacity
+  border: 1px solid $c-bd 
+  box-shadow: $shadow
+
+.main__title
+  width: 100%
+  display: inline-block
+  color: $c-act
+  overflow: hidden
+  white-space: nowrap
+  animation: printed-text 4s steps(50)
+
+@keyframes printed-text
+  0%
+    width: 0
+  

@@ -1,20 +1,33 @@
+@import '../../utils/variables.sass'
+
 .nav
-  margin-top: 2rem
+  padding: 1rem 2rem 1rem 5rem
   display: flex
   flex-direction: column
+  background-color: $bg-opacity
+  backdrop-filter: blur(2px)
+  border-bottom: 1px solid $c-bd
   
   &__list
     padding-block: 1rem
     width: 45vw
     display: flex
     justify-content: space-evenly
-    align-items: center
   
   &__link
-    padding-block: .2rem
-    color: #dbc490
+    padding: .4rem 1.2rem
+    color: $c-act
     font-weight: 300
     font-size: 1.7rem
+    transition: .5s
+
+    &:hover
+      color: $c-act-d
+
+  &__btn-block
+    display: flex
 
 .row
   display: flex
+  justify-content: space-between
+  align-items: center
