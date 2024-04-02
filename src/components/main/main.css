@@ -8,7 +8,7 @@
   color: #dbc490;
   overflow: hidden;
   white-space: nowrap;
-  font-size: 2.6rem;
+  font-size: 4rem;
   -webkit-animation: printed-text 4s steps(50);
           animation: printed-text 4s steps(50);
 }
