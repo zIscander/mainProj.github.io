@@ -1,0 +1,15 @@
+@import '../../utils/_variables'
+
+@keyframes fadeInBlock
+  100%
+    opacity: 1
+    transform: scale(1)
+
+.mainSubtitle
+  max-width: 40%
+  margin: 8rem 0 0 60%
+  color: $c-act
+  text-align: center
+  transform: scale(0)
+  opacity: 0
+  animation: fadeInBlock 2s linear 4s forwards

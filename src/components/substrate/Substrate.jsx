@@ -1,10 +1,11 @@
 import './substrate.css'
 
-export default function Substrate(props) {
+export default function Substrate({children, styles, addClass}) {
+
   return (
     <>
-      <div className="substrate">
-        {props.children}
+      <div className={`substrate ${addClass}`} style={styles}>
+        {children}
       </div>
     </>
   );

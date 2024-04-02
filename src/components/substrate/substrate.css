@@ -1,5 +1,5 @@
 .substrate {
-  padding: 3rem;
+  padding: 2rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -10,26 +10,4 @@
   border: 1px solid rgba(102, 102, 102, 0.8);
   -webkit-box-shadow: -1px 1px 5px 1px #000;
           box-shadow: -1px 1px 5px 1px #000;
-}
-
-.main__title {
-  width: 100%;
-  display: inline-block;
-  color: #dbc490;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-animation: printed-text 4s steps(50);
-          animation: printed-text 4s steps(50);
-}
-
-@-webkit-keyframes printed-text {
-  0% {
-    width: 0;
-  }
-}
-
-@keyframes printed-text {
-  0% {
-    width: 0;
-  }
 }
