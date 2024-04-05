@@ -1,3 +1,52 @@
+@import '../../utils/_variables'
+
+@keyframes pulse
+  100%
+    box-shadow: 0 0 10px $c-act-d
+
 .about
   height: 100vh
   background: url(../../img/bg/about.jpg) no-repeat center / cover
+
+  &__inner
+    height: 100vh
+    display: flex
+    align-items: end
+
+  &__info
+    color: $c-act
+
+  &__list
+    font-size: 1.8rem
+
+    &-item
+      position: relative
+      display: flex
+      align-items: center
+      margin-top: 3rem
+
+      &:nth-last-child(2)
+        margin-left: 32rem
+      &:nth-last-child(3)
+        margin-left: 40rem
+      &:nth-last-child(4)
+        margin-left: 48rem
+
+      &::before
+        content: ''
+        position: absolute
+        left: -2.2rem
+        width: 1.4rem
+        height: 1.4rem
+        border-radius: 50%
+        background: $c-act-d
+        box-shadow: 0 0 3px 3px $c-act
+        animation: pulse 1s linear infinite alternate-reverse
+
+  &__arrow
+    // width: 58rem
+    position: absolute
+    top: 3rem
+    left: 2rem
+    filter: brightness(60%)
+    rotate: -6deg

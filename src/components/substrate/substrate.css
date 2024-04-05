@@ -12,3 +12,10 @@
   -webkit-box-shadow: -1px 1px 5px 1px #000;
           box-shadow: -1px 1px 5px 1px #000;
 }
+
+.is-big-darken {
+  margin-right: 1rem;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #9f7e33;
+}

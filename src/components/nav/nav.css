@@ -13,6 +13,7 @@
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   border-bottom: 1px solid rgba(102, 102, 102, 0.8);
+  z-index: 100;
 }
 .nav__list {
   padding-block: 1rem;
@@ -23,6 +24,9 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 .nav__link {
   padding: 0.4rem 1.2rem;
