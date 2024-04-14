@@ -17,36 +17,34 @@
     color: $c-act
 
   &__list
+    margin-bottom: 5rem
+    display: flex
+    align-items: flex-end
+    column-gap: 2rem
     font-size: 1.8rem
 
     &-item
-      position: relative
+      padding: 2rem
       display: flex
       align-items: center
-      margin-top: 3rem
+      justify-content: end
+      flex-direction: column-reverse
+      text-align: center
+      border: 2px solid $c-bd
+      border-radius: 2rem
+      background-color: $bg-opacity
+      animation: pulse 1s linear infinite alternate
+      transition: all .6s
 
-      &:nth-last-child(2)
-        margin-left: 32rem
-      &:nth-last-child(3)
-        margin-left: 40rem
-      &:nth-last-child(4)
-        margin-left: 48rem
+      &:hover
+        scale: 1.05
 
-      &::before
-        content: ''
-        position: absolute
-        left: -2.2rem
-        width: 1.4rem
-        height: 1.4rem
-        border-radius: 50%
-        background: $c-act-d
-        box-shadow: 0 0 3px 3px $c-act
-        animation: pulse 1s linear infinite alternate-reverse
+      &:nth-child(2)
+        height: 25rem
+      &:nth-child(3)
+        height: 30rem
+      &:nth-child(4)
+        height: 35rem
+      &:nth-child(5)
+        height: 40rem
 
-  &__arrow
-    // width: 58rem
-    position: absolute
-    top: 3rem
-    left: 2rem
-    filter: brightness(60%)
-    rotate: -6deg
