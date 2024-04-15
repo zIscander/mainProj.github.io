@@ -4,9 +4,14 @@
   100%
     box-shadow: 0 0 10px $c-act-d
 
+@keyframes career
+  100%
+    top: 0
+
 .about
   height: 100vh
   background: url(../../img/bg/about.jpg) no-repeat center / cover
+  overflow: hidden
 
   &__inner
     height: 100vh
@@ -17,36 +22,43 @@
     color: $c-act
 
   &__list
+    margin-bottom: 5rem
+    display: flex
+    align-items: flex-end
+    column-gap: 2rem
     font-size: 1.8rem
 
     &-item
+      padding: 1rem
       position: relative
+      top: 100rem
       display: flex
       align-items: center
-      margin-top: 3rem
+      justify-content: end
+      flex-direction: column-reverse
+      text-align: center
+      border: 2px solid $c-bd
+      border-radius: 2rem
+      background-color: $bg-opacity
+      font-size: 0
+      animation: pulse 1s linear infinite alternate
+      transition: all .6s
 
-      &:nth-last-child(2)
-        margin-left: 32rem
-      &:nth-last-child(3)
-        margin-left: 40rem
-      &:nth-last-child(4)
-        margin-left: 48rem
+      &:hover
+        font-size: 3rem
 
-      &::before
-        content: ''
-        position: absolute
-        left: -2.2rem
-        width: 1.4rem
-        height: 1.4rem
-        border-radius: 50%
-        background: $c-act-d
-        box-shadow: 0 0 3px 3px $c-act
-        animation: pulse 1s linear infinite alternate-reverse
+      &:nth-child(1)
+        animation: career 2s linear forwards
+      &:nth-child(2)
+        height: 20rem
+        animation: career 2s linear .5s forwards
+      &:nth-child(3)
+        height: 25rem
+        animation: career 2s linear 1s forwards
+      &:nth-child(4)
+        height: 30rem
+        animation: career 2s linear 1.5s forwards
+      &:nth-child(5)
+        height: 35rem
+        animation: career 2s linear 2s forwards
 
-  &__arrow
-    // width: 58rem
-    position: absolute
-    top: 3rem
-    left: 2rem
-    filter: brightness(60%)
-    rotate: -6deg
