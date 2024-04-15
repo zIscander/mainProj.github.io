@@ -1,0 +1,26 @@
+.main {
+  height: 100vh;
+  background: url(../../img/bg/bg.jpg) no-repeat center/cover;
+}
+.main__title {
+  width: 100%;
+  display: inline-block;
+  color: #dbc490;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 4rem;
+  -webkit-animation: printed-text 4s steps(50);
+          animation: printed-text 4s steps(50);
+}
+
+@-webkit-keyframes printed-text {
+  0% {
+    width: 0;
+  }
+}
+
+@keyframes printed-text {
+  0% {
+    width: 0;
+  }
+}

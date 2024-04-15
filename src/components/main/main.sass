@@ -1,0 +1,20 @@
+@import '../../utils/variables.sass'
+
+.main
+  // width: 100vw
+  height: 100vh
+  background: url(../../img/bg/bg.jpg) no-repeat center / cover
+
+  &__title
+    width: 100%
+    display: inline-block
+    color: $c-act
+    overflow: hidden
+    white-space: nowrap
+    font-size: 4rem
+    animation: printed-text 4s steps(50)
+
+
+@keyframes printed-text
+  0%
+    width: 0

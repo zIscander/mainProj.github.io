@@ -1,0 +1,22 @@
+.substrate {
+  padding: 2rem;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 0.8rem;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  background-color: rgba(51, 51, 51, 0.8);
+  border: 1px solid rgba(102, 102, 102, 0.8);
+  -webkit-box-shadow: -1px 1px 5px 1px #000;
+          box-shadow: -1px 1px 5px 1px #000;
+}
+
+.is-big-darken {
+  margin-top: 2rem;
+  display: block;
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #9f7e33;
+}

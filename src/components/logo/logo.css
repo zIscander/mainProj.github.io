@@ -1,0 +1,23 @@
+.logo {
+  width: 140px;
+}
+.logo__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.logo__img {
+  margin-bottom: 0.5rem;
+}
+.logo__txt {
+  color: #dbc490;
+  font-size: 1.2rem;
+  font-weight: 150;
+}
