@@ -14,9 +14,9 @@
 }
 
 .is-big-darken {
-  margin-right: 1rem;
+  margin-top: 2rem;
+  display: block;
   font-size: 3.2rem;
   font-weight: 800;
   color: #9f7e33;
-  rotate: -30deg;
 }

@@ -4,9 +4,14 @@
   100%
     box-shadow: 0 0 10px $c-act-d
 
+@keyframes career
+  100%
+    top: 0
+
 .about
   height: 100vh
   background: url(../../img/bg/about.jpg) no-repeat center / cover
+  overflow: hidden
 
   &__inner
     height: 100vh
@@ -24,7 +29,9 @@
     font-size: 1.8rem
 
     &-item
-      padding: 2rem
+      padding: 1rem
+      position: relative
+      top: 100rem
       display: flex
       align-items: center
       justify-content: end
@@ -33,18 +40,25 @@
       border: 2px solid $c-bd
       border-radius: 2rem
       background-color: $bg-opacity
+      font-size: 0
       animation: pulse 1s linear infinite alternate
       transition: all .6s
 
       &:hover
-        scale: 1.05
+        font-size: 3rem
 
+      &:nth-child(1)
+        animation: career 2s linear forwards
       &:nth-child(2)
-        height: 25rem
+        height: 20rem
+        animation: career 2s linear .5s forwards
       &:nth-child(3)
-        height: 30rem
+        height: 25rem
+        animation: career 2s linear 1s forwards
       &:nth-child(4)
-        height: 35rem
+        height: 30rem
+        animation: career 2s linear 1.5s forwards
       &:nth-child(5)
-        height: 40rem
+        height: 35rem
+        animation: career 2s linear 2s forwards
 

@@ -10,9 +10,20 @@
             box-shadow: 0 0 10px #9f7e33;
   }
 }
+@-webkit-keyframes career {
+  100% {
+    top: 0;
+  }
+}
+@keyframes career {
+  100% {
+    top: 0;
+  }
+}
 .about {
   height: 100vh;
   background: url(../../img/bg/about.jpg) no-repeat center/cover;
+  overflow: hidden;
 }
 .about__inner {
   height: 100vh;
@@ -40,7 +51,9 @@
   font-size: 1.8rem;
 }
 .about__list-item {
-  padding: 2rem;
+  padding: 1rem;
+  position: relative;
+  top: 100rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,23 +71,36 @@
   border: 2px solid rgba(102, 102, 102, 0.8);
   border-radius: 2rem;
   background-color: rgba(51, 51, 51, 0.8);
+  font-size: 0;
   -webkit-animation: pulse 1s linear infinite alternate;
           animation: pulse 1s linear infinite alternate;
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
 .about__list-item:hover {
-  scale: 1.05;
+  font-size: 3rem;
+}
+.about__list-item:nth-child(1) {
+  -webkit-animation: career 2s linear forwards;
+          animation: career 2s linear forwards;
 }
 .about__list-item:nth-child(2) {
-  height: 25rem;
+  height: 20rem;
+  -webkit-animation: career 2s linear 0.5s forwards;
+          animation: career 2s linear 0.5s forwards;
 }
 .about__list-item:nth-child(3) {
-  height: 30rem;
+  height: 25rem;
+  -webkit-animation: career 2s linear 1s forwards;
+          animation: career 2s linear 1s forwards;
 }
 .about__list-item:nth-child(4) {
-  height: 35rem;
+  height: 30rem;
+  -webkit-animation: career 2s linear 1.5s forwards;
+          animation: career 2s linear 1.5s forwards;
 }
 .about__list-item:nth-child(5) {
-  height: 40rem;
+  height: 35rem;
+  -webkit-animation: career 2s linear 2s forwards;
+          animation: career 2s linear 2s forwards;
 }
